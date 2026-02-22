@@ -12,7 +12,7 @@ const busca = () => {
     const mostrar = document.getElementById('mostrar');
 
      if((input == "" ) || (input == null)|| (input == undefined)){
-                mostrar.innerHTML = "Nenhum nome digitado! Digite o nome"
+                pesquisaNomes.innerHTML = "Nenhum nome digitado! Digite o nome"
 
                 
         }else if (input === "nome".toLocaleLowerCase()) {
@@ -26,7 +26,7 @@ const busca = () => {
                     mostrar.innerHTML = ""
 
                     for (let i = 0; i < data.results.length; i++) {
-                        pesquisaNomes.innerHTML += data.results[i].name + "<br>";
+                        area.innerHTML += data.results[i].name + "<br>";
                     }
                     
                 });

@@ -65,7 +65,10 @@ p{
     padding: 20px;
 }
 
-
+.div{
+    width: 90%;
+    height: auto;
+}
 .conteiner{
     display: flex;
     justify-content: space-around;
