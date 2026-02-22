@@ -65,8 +65,7 @@ const busca = () => {
 
             //caso a pessoa escreva mal ou escreva algo que nao tenha
             .catch(() => {
-                mostrar.innerHTML = `O Pokémon  não foi encontrado 😢`;
-                img.innerHTML = "";
+                mostrar.innerHTML = `O Pokémon <strong> ${input} </strong> não foi encontrado 😢`;
                 
             });
 
