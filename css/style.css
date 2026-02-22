@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: rgb(243, 244, 246);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: RGB(239, 68, 68);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+
+}
+
+input{
+    background-color: white;
+    width: 80%;
+    height: 60px;
+    border-radius: 30px;
+    border: rgb(223, 215, 215);
+    outline: none;
+    margin: 30px;
+}
+
+.input{
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+button{
+    width: 30%;
+    height: 59px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(239, 68, 68);
+}
+
+button:hover{
+    background-color: orange;
+}
+
+h2{
+    color: RGB(239, 68, 68);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+}
+
+p{
+    color: RGB(17, 24, 39);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.area{
+
+    width: 80%;
+    height: auto;
+    padding: 20px;
+}
+
+
+.conteiner{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+}
+.card{
+    width: 45%;
+    background: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.descricao{
+    width: 45%;
+    background: yellow;
+    border-radius: 1rem;
+    padding-left: 30px;
+}
+
+.img{
+    
+    width: auto;
+    height: auto;
+}

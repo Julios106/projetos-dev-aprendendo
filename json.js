@@ -1,14 +1,11 @@
-let usuarios = '[{"nome":"Ana","idade":19},{"nome":"Paulo","idade":30},{"nome":"Marta","idade":22}]';
 
-let objeto = JSON.parse(usuarios);
-//console.log(objeto[0]);
-
-for (let i = 0; i < objeto.length; i++) {
-    //console.log(objeto[i].nome);
-}
 
 const botao = document.getElementById('botao');
 const input2 = document.getElementById('input');
+const nome = document.getElementById('nome');
+const pesquisaNomes = document.getElementById('nomes');
+const area = document.getElementById('area');
+const img = document.getElementById('img');
 
 const busca = () => {
     const input = document.getElementById('input').value.toLowerCase();//transformar tudo em minusculo.
@@ -29,7 +26,7 @@ const busca = () => {
                     mostrar.innerHTML = ""
 
                     for (let i = 0; i < data.results.length; i++) {
-                        mostrar.innerHTML += data.results[i].name + "<br>";
+                        pesquisaNomes.innerHTML += data.results[i].name + "<br>";
                     }
                     
                 });
@@ -47,19 +44,35 @@ const busca = () => {
                 //console.log(dados.abilities[0].ability.name)
 
 
-            
-                mostrar.innerHTML = `-Nome:${dados.name}<br>-Altura:${dados.height}<br>-Peso:${dados.weight}<br>-Habilidade:${dados.abilities[0].ability.name} `;
-                document.getElementById('img').innerHTML = `<img src="${dados.sprites.front_default}" style="width: 300px; height: 200px; ;">`;
+
+        
+                let info = ` <div class="conteiner">
+                        <div id="mostrar" class="descricao">
+                            <h2 id="nome">${dados.name}</h2>
+                            <p > Nome:${dados.name}<br>Altura:${dados.height}<br>Peso:${dados.weight}<br>Habilidade:${dados.abilities[0].ability.name}<br>Info:Brevimente </p>
+                        </div>
+                        <div   class="card">
+                            <div id="img" class="img">
+                                <img src="${dados.sprites.front_default}" style="width: 300px; height: 250px; ;">
+                            </div>
+                        </div>
+                    </div>`;
+
+                area.innerHTML = info    
+
+
             })
 
             //caso a pessoa escreva mal ou escreva algo que nao tenha
             .catch(() => {
-                mostrar.innerHTML = `O Pokémon <strong> ${input} </strong> não foi encontrado 😢`;
+                mostrar.innerHTML = `O Pokémon  não foi encontrado 😢`;
+                img.innerHTML = "";
+                
             });
 
             }
 
-            input.focus()
+            input2.focus()
 
 
 
