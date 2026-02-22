@@ -12,7 +12,7 @@ const busca = () => {
     const mostrar = document.getElementById('mostrar');
 
      if((input == "" ) || (input == null)|| (input == undefined)){
-                pesquisaNomes.innerHTML = "Nenhum nome digitado! Digite o nome"
+                area.innerHTML = "Nenhum nome digitado! Digite o nome"
 
                 
         }else if (input === "nome".toLocaleLowerCase()) {
@@ -23,7 +23,7 @@ const busca = () => {
                     console.log("Lista de Pokémons:");
                     
                     //para mostrar uque ta dentro do for no paragrafo pre
-                    mostrar.innerHTML = ""
+                    area.innerHTML = ""
 
                     for (let i = 0; i < data.results.length; i++) {
                         area.innerHTML += data.results[i].name + "<br>";
@@ -65,7 +65,7 @@ const busca = () => {
 
             //caso a pessoa escreva mal ou escreva algo que nao tenha
             .catch(() => {
-                mostrar.innerHTML = `O Pokémon <strong> ${input} </strong> não foi encontrado 😢`;
+                area.innerHTML = `<strong>O Pokémon não foi encontrado 😢<strong>`;
                 
             });
 
